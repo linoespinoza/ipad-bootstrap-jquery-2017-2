@@ -9,9 +9,9 @@ $(document).ready(function(){
 	//console.log(role);
 
 	// DOM Manipulation
-	console.log($("#name").attr("value"));
+	//console.log($("#name").attr("value"));
 	
-	$(".custom-select").attr("class", "claseDefault");
+	//$(".custom-select").attr("class", "claseDefault");
 
 	// @To Do (revisar manipulación de data attributes)
 });
