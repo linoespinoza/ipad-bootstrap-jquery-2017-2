@@ -258,7 +258,7 @@
           </div>
           <div class="modal-body">
             <!-- registration form -->
-            <form>
+            <form id="registration-form" method="post" action="post.html">
               <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -268,15 +268,16 @@
               <h5 class="mb-4">Basic Info</h5>
               <div class="form-group">
                 <label class="form-control-label" for="name">Name:</label>
-                <input type="text" class="form-control" id="name">
+                <input type="text" class="form-control" id="name" name="name">
               </div>
               <div class="form-group">
                 <label class="form-control-label" for="email">Email:</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" name="email">
               </div>
               <div class="form-group">
                 <label for="role">Job Role:</label>
-                <select class="custom-select form-control" id="role">
+                <select class="custom-select form-control" id="role" name="role">
+                  <option value="">Select one option</option>
 									<option value="full stack js developer">Full Stack JavaScript Developer</option>
 									<option value="front end developer">Front End Developer</option>
 									<option value="back end developer">Back End Developer</option>
@@ -290,35 +291,35 @@
 
               <div class="form-check">
                 <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input">
+                  <input type="checkbox" name="topics" class="custom-control-input" value="JavaScript Frameworks">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">JavaScript Frameworks</span>
                 </label>
               </div>
               <div class="form-check">
                 <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input">
+                  <input type="checkbox" name="topics" class="custom-control-input" value="JavaScript Libraries">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">JavaScript Libraries</span>
                 </label>
               </div>
               <div class="form-check">
                 <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input">
+                  <input type="checkbox" name="topics" class="custom-control-input" value="Node.js">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">Node.js</span>
                 </label>
               </div>
               <div class="form-check">
                 <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input">
+                  <input type="checkbox" name="topics" class="custom-control-input" value="Build Tools">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">Build Tools</span>
                 </label>
               </div>
               <div class="form-check">
                 <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input">
+                  <input type="checkbox" name="topics" class="custom-control-input" value="ES2015">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">ES2015</span>
                 </label>
@@ -330,17 +331,17 @@
               <div class="form-row">
                 <div class="col-lg-6 form-group">
                   <label for="cc-num">Card Number:</label>
-                  <input class="form-control" id="cc-num" type="text">
+                  <input class="form-control" id="cc-num" name="cc-num" type="text">
                 </div>
 
                 <div class="col-lg form-group">
                   <label for="zip">Zip Code:</label>
-                  <input class="form-control" id="zip" type="text">
+                  <input class="form-control" id="zip" name="zip" type="text">
                 </div>
 
                 <div class="col-lg form-group">
                   <label for="cvv">CVV:</label>
-                  <input class="form-control" id="cvv" type="text">
+                  <input class="form-control" id="cvv" name="cvv" type="text">
                 </div>
               </div>
 
@@ -348,7 +349,7 @@
                 <label class="col-lg-12">Expiration Date:</label>
 
                 <div class="form-group col-lg-8">
-                  <select class="custom-select form-control" id="exp-month">
+                  <select class="custom-select form-control" id="exp-month" name="exp-month">
                     <option value="1">1 - January</option>
                     <option value="2">2 - February</option>
                     <option value="3">3 - March</option>
@@ -365,7 +366,7 @@
                 </div>
 
                 <div class="form-group col-lg">
-                  <select class="custom-select form-control" id="exp-year">
+                  <select class="custom-select form-control" id="exp-year" name="exp-year">
                     <option value="2016">2016</option>
                     <option value="2017">2017</option>
                     <option value="2018">2018</option>
@@ -388,6 +389,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
     <script>
       $(document).ready(function(){
         // Lo que deben de hacer
@@ -401,8 +404,21 @@
         // Obtener el valor del elemento anterior al primero, de los hijos de la etiqueta
         // select cuyo id sea igual a role
         console.log($('select#role').children().eq(-1).attr('value'));
-      })
-
+        
+        $('#registration-form').validate({
+          rules: {
+            name: { required: true, minlength: 10 },
+            email: { required : true, email: true } ,
+            role: { required: true },
+            messages: {
+              email: { 
+                required: 'Este campo es requerido',
+                email: 'Debes de colocar un email válido'
+              }
+            }
+          }
+        });
+      });
     </script>
   </body>
 </html>

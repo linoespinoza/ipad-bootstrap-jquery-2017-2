@@ -25,4 +25,8 @@ $(document).ready(function(){
 
 	// Método attr: Reemplaza el valor de un atributo específico
 	// ('input#name').attr('placeholder', 'Enter your name');
+
+	$('#registration-form').submit(function(event){
+		console.log(event);
+	});
 })
