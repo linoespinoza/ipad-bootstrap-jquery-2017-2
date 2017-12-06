@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>jQuery.noConflict Demo</title>
+	<style type="text/css">
+		ul.dias { display: none; }
+	</style>
 </head>
 <body>
 	<div id="log">
@@ -16,13 +19,34 @@
 	<div class="important">
 		<h3>Importante para otros</h3>
 	</div>
-	<form>
+	<form class="formulario">
 		<label for="name"></label>
 		<input type="text" name="name" id="name"><br>
 		<label for="lastname"></label>
 		<input type="text" name="lastname" id="lastname">
 	</form>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+	<ol>
+		<li>Día 1</li>
+	</ol>
+
+	<ul class="dias">
+		<li>Lunes</li>
+		<li>Martes</li>
+		<li>Miércoles</li>
+		<li>Jueves</li>
+		<li>Viernes</li>
+		<li>Sábado</li>
+		<li>Domingo</li>
+	</ul>
+
+	<a id="hideDias">Ocultar ul de clase igual a dias</a><br>
+	<a id="fadeOutDias">Fade Out</a><br>
+	<a id="slideUpDias">Slide Up</a><br>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
