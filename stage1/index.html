@@ -258,127 +258,91 @@
           </div>
           <div class="modal-body">
             <!-- registration form -->
-            <form id="registration-form" method="post" action="post.html">
-              <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <strong>Hurry!</strong> Early bird registration ends in two days.
-              </div>
-              <h5 class="mb-4">Basic Info</h5>
-              <div class="form-group">
-                <label class="form-control-label" for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name">
-              </div>
-              <div class="form-group">
-                <label class="form-control-label" for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email">
-              </div>
-              <div class="form-group">
-                <label for="role">Job Role:</label>
-                <select class="custom-select form-control" id="role" name="role">
-                  <option value="">Select one option</option>
-									<option value="full stack js developer">Full Stack JavaScript Developer</option>
-									<option value="front end developer">Front End Developer</option>
-									<option value="back end developer">Back End Developer</option>
-									<option value="designer">Designer</option>
-									<option value="student">Student</option>
-                </select>
-              </div>
+            <form role="form" class="registration-form" action="javascript:void(0);">
+                    <fieldset>
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>Lorem ipsum dolor sit amet</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <input type="text" class="form-control" placeholder="Firstname" id="fname">
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <input type="text" class="form-control" placeholder="Lastname" id="lname">
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom:3px;">
+                                <div class="row">
+                                    <div class="form-group col-md-3 col-sm-3">
+                                        <select class="form-control">
+                                            <option>00</option>
+                                            <option>00</option>
+                                            <option>00</option>
+                                            <option>00</option>
+                                            <option>00</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-9 col-sm-9">
+                                        <input type="text" class="form-control" placeholder="Contact Number" id="contact_number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" placeholder="Email" class="form-email form-control" id="email" required>
+                            </div>
 
-              <hr class="my-4">
-              <h5 class="mb-4">Which Topics Interest You Most?</h5>
-
-              <div class="form-check">
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" name="topics" class="custom-control-input" value="JavaScript Frameworks">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">JavaScript Frameworks</span>
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" name="topics" class="custom-control-input" value="JavaScript Libraries">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">JavaScript Libraries</span>
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" name="topics" class="custom-control-input" value="Node.js">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Node.js</span>
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" name="topics" class="custom-control-input" value="Build Tools">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Build Tools</span>
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" name="topics" class="custom-control-input" value="ES2015">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">ES2015</span>
-                </label>
-              </div>
-
-              <hr class="mb-4">
-              <h5 class="mb-4">Payment Info</h5>
-
-              <div class="form-row">
-                <div class="col-lg-6 form-group">
-                  <label for="cc-num">Card Number:</label>
-                  <input class="form-control" id="cc-num" name="cc-num" type="text">
-                </div>
-
-                <div class="col-lg form-group">
-                  <label for="zip">Zip Code:</label>
-                  <input class="form-control" id="zip" name="zip" type="text">
-                </div>
-
-                <div class="col-lg form-group">
-                  <label for="cvv">CVV:</label>
-                  <input class="form-control" id="cvv" name="cvv" type="text">
-                </div>
-              </div>
-
-              <div class="form-row">
-                <label class="col-lg-12">Expiration Date:</label>
-
-                <div class="form-group col-lg-8">
-                  <select class="custom-select form-control" id="exp-month" name="exp-month">
-                    <option value="1">1 - January</option>
-                    <option value="2">2 - February</option>
-                    <option value="3">3 - March</option>
-                    <option value="4">4 - April</option>
-                    <option value="5">5 - May</option>
-                    <option value="6">6 - June</option>
-                    <option value="7">7 - July</option>
-                    <option value="8">8 - August</option>
-                    <option value="9">9 - September</option>
-                    <option value="10">10 - October</option>
-                    <option value="11">11 - November</option>
-                    <option value="12">12 - December</option>
-                  </select>
-                </div>
-
-                <div class="form-group col-lg">
-                  <select class="custom-select form-control" id="exp-year" name="exp-year">
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                  </select>
-                </div>
-              </div>
-
-              <hr class="mb-4">
-              <button type="submit" class="btn btn-primary btn-lg">Register</button>
-            </form><!-- /registration form -->
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="btn btn-next">Next</button>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span> Lorem ipsum dolor sit amet</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>Location</option>
+                                    <option>Location</option>
+                                    <option>Location</option>
+                                    <option>Location</option>
+                                    <option>Locationa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control" id="pref_date">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>Preffered Time</option>
+                                    <option>Location</option>
+                                    <option>Location</option>
+                                    <option>Location</option>
+                                    <option>Location</option>
+                                    <option>Locationa</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-previous">Previous</button>
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
           </div>
         </div>
       </div>
@@ -386,7 +350,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
@@ -403,6 +367,38 @@
         //console.log($('select#role').children().attr('value'));
         // Obtener el valor del elemento anterior al primero, de los hijos de la etiqueta
         // select cuyo id sea igual a role
+
+        $('.registration-form fieldset:first-child').fadeIn('slow');
+        
+        // next step
+        $('.registration-form .btn-next').on('click', function () {
+            var parent_fieldset = $(this).parents('fieldset');
+            var next_step = true;
+
+            parent_fieldset.find('input[type="text"],input[type="email"]').each(function () {
+                if ($(this).val() == "") {
+                    $(this).addClass('input-error');
+                    next_step = false;
+                } else {
+                    $(this).removeClass('input-error');
+                }
+            });
+
+            if (next_step) {
+                parent_fieldset.fadeOut(400, function () {
+                    $(this).next().fadeIn();
+                });
+            }
+
+        });
+
+        // previous step
+        $('.registration-form .btn-previous').on('click', function () {
+            $(this).parents('fieldset').fadeOut(400, function () {
+                $(this).prev().fadeIn();
+            });
+        });
+
         console.log($('select#role').children().eq(-1).attr('value'));
         
         $('#registration-form').validate({

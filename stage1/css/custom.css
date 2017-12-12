@@ -8,3 +8,12 @@
   background-image: url('../img/jumbo-bg.jpg');
   background-size: cover;
 }
+
+form.registration-form fieldset {
+    display: none;
+}
+
+form .form-bottom .input-error {
+    border-color: #d03e3e;
+    color: #d03e3e;
+}
